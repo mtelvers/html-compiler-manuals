@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["4.14", "5.0", "5.1"]
+    branches: ["5.2.0"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,18 +32,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          path: '4.14'
-          ref: '4.14'
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: '5.0'
-          ref: '5.0'
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: '5.1'
-          ref: '5.1'
+          path: '5.2.0'
+          ref: '5.2.0'
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
